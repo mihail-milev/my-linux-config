@@ -1,6 +1,6 @@
 # What?
 
-These are my personal Linux configuration, which I use on several machines and got tired of constantly have to manually copy & paste them across different machines.
+These are my personal Linux configurations, which I use on several machines and got tired of constantly having to manually copy & paste them across different machines.
 
 # How?
 
