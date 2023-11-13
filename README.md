@@ -7,7 +7,7 @@ These are my personal Linux configurations, which I use on several machines and 
 ```bash
 git clone https://github.com/mihail-milev/my-linux-config.git
 cd my-linux-config
-cp -R ./* ~
+find ./ -maxdepth 1 -not -name "*.md" -not -name ".git" -not -path "./" -exec cp -R {} ~/ \;
 ```
 
 # License

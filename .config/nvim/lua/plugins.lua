@@ -100,4 +100,15 @@ return require("packer").startup(function(use)
             require("configs.tokyonight")
         end
     })
+
+    -- Markdown preview
+    use({
+        'toppair/peek.nvim',
+        run = 'deno task --quiet build:fast',
+        config = function()
+            require("configs.peek")
+            vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+            vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+        end
+    })
 end)
