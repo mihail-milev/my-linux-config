@@ -24,14 +24,14 @@ o.fileencoding = "utf-8" -- Sets the character encoding for the file of this buf
 o.ruler = true -- Show the line and column number of the cursor position, separated by a comma.
 o.mouse = "a" -- Enable the use of the mouse. "a" you can use on all modes
 o.title = true -- When on, the title of the window will be set to the value of 'titlestring'
-o.hidden = true -- When on a buffer becomes hidden when it is |abandon|ed
+-- o.hidden = true -- When on a buffer becomes hidden when it is |abandon|ed
 o.ttimeoutlen = 0 -- The time in milliseconds that is waited for a key code or mapped key sequence to complete.
 o.wildmenu = true -- When 'wildmenu' is on, command-line completion operates in an enhanced mode.
 o.showcmd = true -- Show (partial) command in the last line of the screen. Set this option off if your terminal is slow.
 o.showmatch = true -- When a bracket is inserted, briefly jump to the matching one.
 o.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smagic, :snomagic and user commands with the :command-preview flag as you type.
 o.splitbelow = "splitright" -- When on, splitting a window will put the new window below the current one
-vim.opt.whichwrap:append {
+vim.opt.whichwrap:append { -- pressing arrow buttons at line limits moves the cursor to next/previos line - "wrapping"
       ['<'] = true,
       ['>'] = true,
       ['['] = true,
@@ -39,5 +39,7 @@ vim.opt.whichwrap:append {
       h = true,
       l = true,
 }
-global.fuzzy_hidden = 1
-o.nomore = true
+global.fuzzy_hidden = 1 -- when using Ctrl+p to search for file to open, search also through hidden files (slow)
+o.nomore = true -- when having long lists, don't stop on "-- more --" and wait, but just continue till the end
+global.netrw_browse_split = 4 -- let Netrw browser open file in previous window
+

@@ -1,13 +1,11 @@
-local status, blankline = pcall(require, "indent-blankline")
+local status, blankline = pcall(require, "ibl")
 
 if not status then
+    error("unable to find blankline")
     return
 end
 
-blankline.setup({
-    show_end_of_line = true,
-    space_char_blankline = " ",
-})
+blankline.setup({})
 
 vim.opt.list = true
 vim.opt.listchars:append "space:⋅"

@@ -24,7 +24,8 @@ map("n", "<leader>b", ":buffers<CR>:b<Space>")
 -- Fast reload of configs
 map("n", "<leader>r", "<CMD>luafile %<CR>")
 
--- Autocmd to load git branch name
--- vim.api.nvim_create_autocmd("BufEnter", {command = "set statusline+=%{system(\"git branch 2>&1 | awk 'NF==2 {print $2}'\")}"})
--- set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
--- set statusline=%{system('echo\ -n\ $\(pwd\ -L\)')}
+-- Try copy&paste with Konsole shortcuts
+map("n", "<C-S-V>", '"+gP')
+map("v", "<C-S-C>", '"+y')
+map("v", "<C-S-X>", '"+d')
+
