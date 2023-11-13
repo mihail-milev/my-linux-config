@@ -1,5 +1,6 @@
 local global = vim.g
 local o = vim.o
+local opt = vim.opt
 
 vim.scriptencoding = "utf-8"
 
@@ -31,7 +32,7 @@ o.showcmd = true -- Show (partial) command in the last line of the screen. Set t
 o.showmatch = true -- When a bracket is inserted, briefly jump to the matching one.
 o.inccommand = "split" -- When nonempty, shows the effects of :substitute, :smagic, :snomagic and user commands with the :command-preview flag as you type.
 o.splitbelow = "splitright" -- When on, splitting a window will put the new window below the current one
-vim.opt.whichwrap:append { -- pressing arrow buttons at line limits moves the cursor to next/previos line - "wrapping"
+opt.whichwrap:append { -- pressing arrow buttons at line limits moves the cursor to next/previos line - "wrapping"
       ['<'] = true,
       ['>'] = true,
       ['['] = true,
@@ -39,6 +40,15 @@ vim.opt.whichwrap:append { -- pressing arrow buttons at line limits moves the cu
       h = true,
       l = true,
 }
+opt.list = true
+opt.listchars:append "space:⋅"
+opt.listchars:append "eol:↴"
+opt.listchars:append "tab:» "
+opt.listchars:append 'trail:·'
+opt.listchars:append 'extends:<'
+opt.listchars:append 'precedes:>'
+opt.listchars:append 'conceal:┊'
+opt.listchars:append 'nbsp:␣'
 global.fuzzy_hidden = 1 -- when using Ctrl+p to search for file to open, search also through hidden files (slow)
 o.nomore = true -- when having long lists, don't stop on "-- more --" and wait, but just continue till the end
 global.netrw_browse_split = 4 -- let Netrw browser open file in previous window
