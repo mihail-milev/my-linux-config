@@ -24,8 +24,15 @@ map("n", "<leader>b", ":buffers<CR>:b<Space>")
 -- Fast reload of configs
 map("n", "<leader>r", "<CMD>luafile %<CR>")
 
+-- Open terminal
+map("n", "<leader>t", "<CMD>belowright split +term<CR><CMD>startinsert<CR>")
+
+-- Open MD preview
+map("n", "<leader>m", "<CMD>PeekOpen<CR>")
+
 -- Try copy&paste with Konsole shortcuts
 map("n", "<C-S-V>", '"+gP')
+map("i", "<C-S-V>", '<Esc>"+gP<CMD>startinsert<CR>')
 map("v", "<C-S-C>", '"+y')
 map("v", "<C-S-X>", '"+d')
 

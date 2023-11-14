@@ -27,8 +27,8 @@
         {
           "background": "#ff479c",
           "foreground": "#000000",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\uE0B4",
+          "leading_diamond": "<transparent,background>\uE0B0</>",
+          "trailing_diamond": "\uE0B0",
           "properties": {
             "style": "full"
           },
@@ -39,8 +39,8 @@
         {
           "background": "#9ec3f0",
           "foreground": "#000000",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\uE0B4",
+          "leading_diamond": "<transparent,background>\uE0B0</>",
+          "trailing_diamond": "\uE0B0",
           "properties": {
             "style": "full"
           },
@@ -51,13 +51,13 @@
         {
           "background": "#1478DB",
           "foreground": "#000000",
-          "leading_diamond": "\ue0b6",
+          "leading_diamond": "<transparent,background>\uE0B0</>",
           "trailing_diamond": "\uE0B0",
-          "properties": {
-            "style": "full"
-          },
           "style": "diamond",
           "template": " {{ .Path }} ",
+          "properties": {
+            "style": "agnoster_full"
+          },
           "type": "path"
         },
         {
@@ -70,7 +70,7 @@
           ],
           "foreground": "#000000",
           "leading_diamond": "<transparent,background>\uE0B0</>",
-          "trailing_diamond": "\ue0b4",
+          "trailing_diamond": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true
