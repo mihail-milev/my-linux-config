@@ -31,8 +31,16 @@ map("n", "<leader>t", "<CMD>belowright split +term<CR><CMD>startinsert<CR>")
 map("n", "<leader>m", "<CMD>PeekOpen<CR>")
 
 -- Try copy&paste with Konsole shortcuts
-map("n", "<C-S-V>", '"+gP')
-map("i", "<C-S-V>", '<Esc>"+gP<CMD>startinsert<CR>')
+map("n", "<C-S-V>", '"+gp')
+map("i", "<C-S-V>", '<Esc>"+gpa')
+map("t", "<C-S-V>", '<C-\\><C-n>"+gpa')
 map("v", "<C-S-C>", '"+y')
 map("v", "<C-S-X>", '"+d')
 
+-- Exit  console faster
+map("t", "<C-e>", '<C-\\><C-n>')
+
+-- Zoom
+map("n", "<leader>=", "<CMD>lua AdjustFontSize(1)<CR>")
+map("n", "<leader>-", "<CMD>lua AdjustFontSize(-1)<CR>")
+map("n", "<leader>0", "<CMD>lua SetDefaultFontSize()<CR>")

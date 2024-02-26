@@ -1,5 +1,6 @@
 require("settings")
 require("plugins")
+require("font_zoom")
 require("maps")
 require("bufferline").setup({})
 require("lualine").setup({})
